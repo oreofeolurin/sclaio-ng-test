@@ -102,7 +102,7 @@
     }
 
     .progress-bar {
-        @include box-shadow(0, 0, 12px, $gray, true);
+        @include box-shadow(0, 0, 12px, null, $gray, true);
         height: 12px;
         border-bottom: 1px solid $gray;
 
