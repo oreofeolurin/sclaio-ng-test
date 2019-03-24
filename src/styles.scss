@@ -2,13 +2,10 @@
 
 
 // 1. Configuration and helpers
-@import
-    'styles/abstracts/variables',
-    'styles/abstracts/mixins';
+@import 'styles/abstracts';
 
 // 2. Base stuff
-@import
-    'styles/base/reset',
-    'styles/base/text';
+@import 'styles/base/reset';
+@import 'styles/base/text';
 
 
