@@ -1,0 +1,139 @@
+@import "../../../styles/abstracts";
+
+%box-effect{
+    border-radius: 4px;
+    border: 1px solid $gray;
+    @include box-shadow(1px, 2px, 1px, -1px, $gray);
+}
+
+.page-wrapper {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-family: $font-family-base;
+}
+
+#donation-box {
+    width: 300px;
+    height: 400px;
+
+    .notification {
+        background: $black-light;
+        color: white;
+        padding: 12px 0;
+        border-radius: 4px;
+        font-size: $font-size-sm;
+        margin-bottom: 20px;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 0;
+            height: 0;
+            top: 40px;
+            right: 20px;
+            position: absolute;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid $black-light;
+        }
+    }
+
+    .content-body {
+        @include box-shadow(1px, 2px, 1px, -1px, $gray);
+        border: 1px solid $gray;
+        width: inherit;
+        height: 250px;
+        font-size: $font-size-sm;
+
+        p {
+            padding: 0 20px;
+            line-height: 20px;
+            color: $gray-dark;
+        }
+    }
+
+    .call-to-action {
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .input-wrapper {
+            position: relative;
+            &::before {
+                content: '$';
+                position: absolute;
+                font-size: $font-size-lg;
+                font-weight: bold;
+                color: $gray-dark;
+                left: 13px;
+                top: 13px;
+            }
+        }
+
+        input {
+            @extend %box-effect;
+            width: 120px;
+            height: 45px;
+            padding: 10px 30px;
+            outline: none;
+            font-size: $font-size-lg;
+            font-weight: bold;
+            font-family: $raleway;
+        }
+
+        button {
+            @extend %box-effect;
+            border-color: $green;
+            width: 120px;
+            background: $green;
+            outline: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            color: white;
+            font-size: $font-size-lg;
+
+            &:hover {
+                background: darken($green, 5%);
+                border-color: darken($green, 5%);
+            }
+        }
+    }
+
+    .progress-bar {
+        @include box-shadow(0, 0, 12px, $gray, true);
+        height: 12px;
+        border-bottom: 1px solid $gray;
+
+        span {
+            animation: fillbar 1s ease-in-out;
+            display: block;
+            height: 100%;
+            width: 70%;
+            background: $orange;
+        }
+    }
+
+    .footer {
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            @extend %box-effect;
+            background: $gray-light;
+            padding: 10px 15px;
+            font-family: $roboto;
+            font-size: $font-size-sm;
+            color: $gray-dark;
+        }
+
+    }
+}
+
+
+@keyframes fillbar {
+    0% {width: 0;}
+    100% {width: 70%;}
+}

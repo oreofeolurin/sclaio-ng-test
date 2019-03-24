@@ -1,0 +1,17 @@
+// COLORS
+$gray: #ececec;
+$gray-light: lighten(#ececec, 5%);
+$gray-dark: darken(#ececec, 45%);
+$orange: #f25d3a;
+$green: #1dbc2c;
+$blue: #18bff3;
+$black-light: lighten(#000, 25%);
+
+
+// TYPOGRAPHY
+$roboto: 'Roboto', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$font-family-base: $raleway;
+$font-size-sm: .85em;
+$font-size-lg: $font-size-sm * 1.5;
+$font-size-xl: $font-size-sm * 1.7;

@@ -1,0 +1,21 @@
+.text-orange {
+    color: $orange;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.link {
+    color: $blue;
+    font-style: italic;
+    text-decoration: none;
+
+    &:hover {
+        font-weight: bold;
+    }
+}
